@@ -1,5 +1,6 @@
 package com.example.receptapp;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
@@ -11,6 +12,7 @@ import java.util.Random;
 
 public class DetailsActivity extends AppCompatActivity {
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,7 +34,7 @@ public class DetailsActivity extends AppCompatActivity {
 
             Random random = new Random();
             int randomYear = random.nextInt(2024 - 1500) + 1500;
-            tvYear.setText("Random évszám: " + randomYear);
+            tvYear.setText("Ekkor készítette először egy random olasz digó: " + randomYear);
         }
 
         btnBack.setOnClickListener(v -> finish());
